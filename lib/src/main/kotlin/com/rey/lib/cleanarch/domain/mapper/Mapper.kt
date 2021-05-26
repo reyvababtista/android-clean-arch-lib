@@ -15,6 +15,6 @@
  */
 package com.rey.lib.cleanarch.domain.mapper
 
-interface Mapper<SourceType, ResultType> {
-    fun map(dataModel: SourceType): ResultType
+interface Mapper<RequestModel, ResponseModel> {
+    fun map(model: RequestModel): ResponseModel
 }
