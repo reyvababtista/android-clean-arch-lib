@@ -44,6 +44,12 @@ fun <T> tryCatch(
 
 const val UNKNOWN_ERROR = "unknown error"
 
+suspend fun <T, S> Result<T>.next(nextFunc: suspend (result: Result<T>) -> Result<S>): Result<S> =
+    when (this) {
+        is Result.Success -> nextFunc(this)
+        is Result.Error -> this
+    }
+
 val <T> Result<T>.data: T
     get() = when (this) {
         is Result.Success -> this.data
