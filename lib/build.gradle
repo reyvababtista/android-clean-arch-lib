@@ -11,8 +11,8 @@ android {
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 30
-        versionCode 1
-        versionName "0.1.0"
+        versionCode 2
+        versionName "0.2.0"
     }
 
     sourceSets.each { variant ->
@@ -65,7 +65,7 @@ ext {
 dependencies {
     api "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     api "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    api 'androidx.core:core-ktx:1.5.0'
+    api 'androidx.core:core-ktx:1.6.0'
     api "com.google.code.gson:gson:$gson"
     api 'com.squareup.retrofit2:retrofit:2.9.0'
 
