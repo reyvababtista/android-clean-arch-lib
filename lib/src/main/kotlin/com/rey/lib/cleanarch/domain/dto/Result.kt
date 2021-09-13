@@ -50,6 +50,9 @@ suspend fun <T, S> Result<T>.next(nextFunc: suspend (result: Result<T>) -> Resul
         is Result.Error -> this
     }
 
+suspend fun <T> Result<T>.nextOnError(func: suspend (err: Result.Error) -> Result<T>): Result<T> =
+    this.apply { if (this is Result.Error) func(this) }
+
 suspend fun <T> Result<T>.onSuccess(func: suspend (data: T) -> Unit): Result<T> =
     this.apply { if (this is Result.Success) func(this.data) }
 
