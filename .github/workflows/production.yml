@@ -2,12 +2,12 @@ name: Android CI
 
 on:
   push:
-    branches: [ dev* ]
+    branches: [ master ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: development
+    environment: production
     steps:
       - uses: actions/checkout@v2
       - name: set up JDK 11
