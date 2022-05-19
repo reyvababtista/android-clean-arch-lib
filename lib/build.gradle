@@ -5,14 +5,14 @@ plugins {
 }
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 32
     buildToolsVersion "30.0.3"
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 31
-        versionCode 12
-        versionName "0.7.5"
+        targetSdkVersion 32
+        versionCode 13
+        versionName "0.7.6"
     }
 
     sourceSets.each { variant ->
@@ -50,7 +50,7 @@ android {
 
 ext {
     spek = "2.0.17"
-    gson = "2.8.7"
+    gson = "2.8.9"
 }
 
 dependencies {
