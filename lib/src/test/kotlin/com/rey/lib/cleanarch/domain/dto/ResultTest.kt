@@ -19,6 +19,7 @@ import com.google.common.truth.Truth.assertThat
 import org.spekframework.spek2.Spek
 import org.spekframework.spek2.style.gherkin.Feature
 
+@Deprecated("spek framework is no longer mantained")
 object ResultTest : Spek({
     Feature("result wrapper") {
         val successData = "foo"
