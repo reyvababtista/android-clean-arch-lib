@@ -31,7 +31,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
-    
+
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_17
     }
@@ -46,6 +46,7 @@ dependencies {
     api 'com.squareup.retrofit2:retrofit:2.9.0'
     api "androidx.security:security-crypto:1.0.0"
 
+    testImplementation "com.google.truth:truth:1.1.4"
     testImplementation 'org.spekframework.spek2:spek-dsl-jvm:2.0.19'
     testImplementation 'org.spekframework.spek2:spek-runner-junit5:2.0.19'
     testImplementation "org.jetbrains.kotlin:kotlin-reflect:1.8.22"
